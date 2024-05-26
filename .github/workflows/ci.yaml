@@ -27,9 +27,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         #Using npm ci is generally faster than running npm install
-      - run: yarn install --frozen-lockfile
-      - run: yarn lint
-      - run: yarn test:ci
+        run: yarn install --frozen-lockfile
+        run: yarn lint
+        run: yarn test:ci
       - name: Build the app
         run: |
           cd my-app
