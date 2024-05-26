@@ -41,7 +41,5 @@ jobs:
       - name: Start the app
         run: |
           cd my-app
-        # Run the app in the background
           npm start &  
-        # Wait for the app to be ready (up to 60 seconds)
           npx wait-on-timeout 60000
